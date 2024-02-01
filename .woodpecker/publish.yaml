@@ -1,0 +1,32 @@
+steps:
+  build:
+    image: jitesoft/node-yarn
+    commands:
+      - yarn install --production
+      - yarn build
+    when:
+      - event: push
+        branch: master
+      - event: push
+        branch: develop
+    volumes:
+      - /var/lib/woodpecker/cache/yarn:/usr/local/share/.cache/yarn
+    #
+    
+  upload:
+    image: woodpeckerci/plugin-s3
+    settings:
+      bucket: savor-front-prod 
+      access_key:
+        from_secret: MINIO_ACCESS_KEY
+      secret_key:
+        from_secret: MINIO_SECRET_KEY
+      source: build/**/*
+      strip_prefix: build/
+      path_style: true
+      target: /
+      endpoint: https://s3.kaliwe.ru
+    when:
+      - event: push
+        branch: master
+
