@@ -1,22 +1,16 @@
 steps:
   build:
-    image: jitesoft/node-yarn
+    image: hugomod/hugo
     commands:
-      - yarn install --production
-      - yarn build
+      - hugo
     when:
       - event: push
         branch: master
-      - event: push
-        branch: develop
-    volumes:
-      - /var/lib/woodpecker/cache/yarn:/usr/local/share/.cache/yarn
-    #
     
   upload:
     image: woodpeckerci/plugin-s3
     settings:
-      bucket: savor-front-prod 
+      bucket: blog
       access_key:
         from_secret: MINIO_ACCESS_KEY
       secret_key:
