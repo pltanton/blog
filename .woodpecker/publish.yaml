@@ -1,6 +1,6 @@
 steps:
   build:
-    image: hugomod/hugo
+    image: hugomods/hugo
     commands:
       - hugo
     when:
