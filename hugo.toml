@@ -1,4 +1,4 @@
-baseurl      = "pltanton.dev"
+baseurl      = "https://pltanton.dev"
 title        = "My Blog"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
