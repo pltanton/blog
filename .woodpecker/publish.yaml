@@ -15,8 +15,8 @@ steps:
         from_secret: MINIO_ACCESS_KEY
       secret_key:
         from_secret: MINIO_SECRET_KEY
-      source: build/**/*
-      strip_prefix: build/
+      source: public/**/*
+      strip_prefix: public/
       path_style: true
       target: /
       endpoint: https://s3.kaliwe.ru
