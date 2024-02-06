@@ -45,7 +45,7 @@ disableHugoGeneratorInject = false
 
 [params]
   [params.author]
-    name = "Jane Doe"
+    name = "Anton Plotnikov"
 
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -113,13 +113,13 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2024
+    trademark = false
     rss = false
     copyright = false
     author = false
 
     topText = []
-    bottomText = []
+    bottomText = ["Cyprus, Paphos"]
 
   # Colors for favicons
   #
@@ -130,7 +130,7 @@ disableHugoGeneratorInject = false
 
   [params.logo]
     logoMark     = ">"
-    logoText     = "$ cd /home/"
+    logoText     = "cd /home/anton/"
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
     # logoCursorDisabled = false
@@ -139,13 +139,8 @@ disableHugoGeneratorInject = false
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
     # logoCursorAnimate  = "2s"
     # Append the current url pathname to logoText 
-    # logoCursorPathname = true
+    logoCursorPathname = true
 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Startpage portrait 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Uncomment this if you want a portrait on your start page
-  #
   [params.portrait]
     path     = "/img/portrait.jpg"
     alt      = "Portrait"
@@ -237,6 +232,10 @@ disableHugoGeneratorInject = false
     subtitle  = "Hello Friend NG Theme"
 
 [menu]
+  [[menu.main]]
+    identifier = "cv"
+    name       = "CV"
+    url        = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
   [[menu.main]]
     identifier = "about"
     name       = "About"
