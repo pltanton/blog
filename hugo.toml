@@ -237,10 +237,6 @@ disableHugoGeneratorInject = false
     name       = "CV"
     url        = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "about/"
-  [[menu.main]]
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
