@@ -119,7 +119,7 @@ disableHugoGeneratorInject = false
     author = false
 
     topText = []
-    bottomText = ["Cyprus, Paphos"]
+    bottomText = []
 
   # Colors for favicons
   #
