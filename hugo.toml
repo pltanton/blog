@@ -209,6 +209,10 @@ disableHugoGeneratorInject = false
     url  = "https://twitter.com/pltanton"
 
   [[params.social]]
+    name = "instagram"
+    url  = "https://www.instagram.com/pltanton"
+
+  [[params.social]]
     name = "email"
     url  = "mailto:plotnikovanton@gmail.com"
 
