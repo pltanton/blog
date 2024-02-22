@@ -146,59 +146,6 @@ disableHugoGeneratorInject = false
     alt      = "Portrait"
     maxWidth = "170px"
 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Commento
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Commento is more than just a comments widget you can embed — 
-  # it’s a return to the roots of the internet. 
-  # An internet without the tracking and invasions of privacy. 
-  # An internet that is simple and lightweight. 
-  # An internet that is focused on interesting discussions, not ads. 
-  # A better internet.
-  # Uncomment this to enable Commento.
-  #
-  # [params.commento]
-  #   url = ""
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Utteranc.es
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  # Utteranc.es is a lightweight comments widget built on GitHub issues.
-  # See https://utteranc.es/ for documentation
-  # Uncomment this to enable Utteranc.es.
-  #
-  # [params.utterances]
-  #   Your GitHub repository
-  #
-  #   repository = ""
-  #
-  #   label used for GitHub issues
-  #
-  #   label      = ""
-  # 
-  #   Blog Post <-> Issue mapping. This parameter is optional. Possible values are:
-  #      - pathname
-  #      - url
-  #      - title
-  #      - og:title
-  #      - issue number
-  #      - specific term
-  #
-  #   issueTerm  = ""
-  #
-  #   Theme used: possible values are:
-  #      - github-light
-  #      - github-dark
-  #      - preferred-color-scheme
-  #      - github-dark-orange
-  #      - icy-dark
-  #      - dark-blue
-  #      - photon-dark
-  #      - boxy-light
-  #      - gruvbox-dark
-  #
-  #   theme      = ""
-  # 
 
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
   # Addon: Social icons
@@ -232,8 +179,6 @@ disableHugoGeneratorInject = false
   [languages.en]
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.en.params]
-    subtitle  = "Hello Friend NG Theme"
 
 [menu]
   [[menu.main]]
