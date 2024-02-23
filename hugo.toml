@@ -1,135 +1,135 @@
 baseURL = "https://pltanton.dev"
-title   = "Plotnikov Anton"
+title = "Plotnikov Anton"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
-paginate  = 10
-rssLimit  = 10  # Maximum number of items in the RSS feed.
+paginate = 10
+rssLimit = 10 # Maximum number of items in the RSS feed.
 
 # googleAnalytics = ""
 # disqusShortname = ""
 
 archetypeDir = "archetypes"
-contentDir   = "content"
-dataDir      = "data"
-layoutDir    = "layouts"
-publishDir   = "public"
+contentDir = "content"
+dataDir = "data"
+layoutDir = "layouts"
+publishDir = "public"
 
-buildDrafts  = false
-buildFuture  = false
+buildDrafts = false
+buildFuture = false
 buildExpired = false
 canonifyURLs = true
 
 enableRobotsTXT = true
-enableGitInfo   = false
-enableEmoji     = true
+enableGitInfo = false
+enableEmoji = true
 enableMissingTranslationPlaceholders = false
-disableRSS     = false
+disableRSS = false
 disableSitemap = false
-disable404     = false
+disable404 = false
 disableHugoGeneratorInject = false
 
 [permalinks]
-  posts = "/posts/:year/:month/:title/"
+posts = "/posts/:year/:month/:title/"
 
 [blackfriday]
-  hrefTargetBlank = true
+hrefTargetBlank = true
 
 [taxonomies]
-  tag      = "tags"
-  category = "categories"
-  series   = "series"
+tag = "tags"
+category = "categories"
+series = "series"
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04"
+dateform = "Jan 2, 2006"
+dateformShort = "Jan 2"
+dateformNum = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04"
 
-  # Metadata mostly used in document's head
-  # 
-  description = "Anton personal blog"
+# Metadata mostly used in document's head
+# 
+description = "Anton personal blog"
 
-  enableThemeToggle = true
-  disableReadOtherPosts = false
+enableThemeToggle = true
+disableReadOtherPosts = false
 
-  enableSharingButtons = false
-  enableGlobalLanguageMenu = false
+enableSharingButtons = false
+enableGlobalLanguageMenu = false
 
-  customCSS = []
-  customJS  = []
+customCSS = []
+customJS = []
 
-  justifyContent = true  # Set "text-align: justify" to .post-content.
+justifyContent = true # Set "text-align: justify" to .post-content.
 
-  [params.author]
-    name = "Anton Plotnikov"
-
-
-  [params.footer]
-    trademark = false
-    rss = false
-    copyright = false
-    author = false
-
-    topText = []
-    bottomText = []
-
-  # Colors for favicons
-  #
-  [params.favicon.color]
-    mask = "#1b1c1d"
-    msapplication = "#1b1c1d"
-    theme = "#1b1c1d"
-
-  [params.logo]
-    logoMark     = ">"
-    logoText     = "cd /home/anton/"
-    logoHomeLink = "/"
-    # Set true to remove the logo cursor entirely.
-    # logoCursorDisabled = false
-    # Set to a valid CSS color to change the cursor in the logo.
-    # logoCursorColor    = "#67a2c9"
-    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
-    # logoCursorAnimate  = "2s"
-    # Append the current url pathname to logoText 
-    logoCursorPathname = true
-
-  [params.portrait]
-    path     = "/img/portrait.jpg"
-    alt      = "Portrait"
-    maxWidth = "170px"
+[params.author]
+name = "Anton Plotnikov"
 
 
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
-  # Addon: Social icons
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-  #
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/pltanton"
+[params.footer]
+trademark = false
+rss = true
+copyright = false
+author = false
 
-  [[params.social]]
-    name = "instagram"
-    url  = "https://www.instagram.com/pltanton"
+topText = []
+bottomText = []
 
-  [[params.social]]
-    name = "email"
-    url  = "mailto:plotnikovanton@gmail.com"
+# Colors for favicons
+#
+[params.favicon.color]
+mask = "#1b1c1d"
+msapplication = "#1b1c1d"
+theme = "#1b1c1d"
 
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/pltanton"
+[params.logo]
+logoMark = ">"
+logoText = "cd /home/anton/"
+logoHomeLink = "/"
+# Set true to remove the logo cursor entirely.
+# logoCursorDisabled = false
+# Set to a valid CSS color to change the cursor in the logo.
+# logoCursorColor    = "#67a2c9"
+# Set to a valid CSS time value to change the animation duration, "0s" to disable.
+# logoCursorAnimate  = "2s"
+# Append the current url pathname to logoText 
+logoCursorPathname = true
 
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
+[params.portrait]
+path = "/img/portrait.jpg"
+alt = "Portrait"
+maxWidth = "170px"
 
-  [[params.social]]
-    name = "telegram"
-    url  = "https://www.t.me/pltanton"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
+# Addon: Social icons
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/pltanton"
+
+[[params.social]]
+name = "instagram"
+url = "https://www.instagram.com/pltanton"
+
+[[params.social]]
+name = "email"
+url = "mailto:plotnikovanton@gmail.com"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/pltanton"
+
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
+
+[[params.social]]
+name = "telegram"
+url = "https://www.t.me/pltanton"
 
 # [languages]
 #   [languages.en]
@@ -137,24 +137,16 @@ disableHugoGeneratorInject = false
 #     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 [menu]
-  [[menu.main]]
-    identifier = "cv"
-    name       = "CV"
-    url        = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
-  [[menu.main]]
-    identifier = "posts"
-    name       = "Posts"
-    url        = "posts/"
+[[menu.main]]
+identifier = "cv"
+name = "CV"
+url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "posts/"
 
 [deployment]
-
 [[deployment.targets]]
-
 name = "production"
 URL = "s3://blog?endpoint=https://s3.kaliwe.ru&region=us-east-1&s3ForcePathStyle=true"
-
-[outputs]
-  home = ['html', 'rss']
-  section = ['html', 'rss']
-  taxonomy = ['html']
-  term = ['html']
