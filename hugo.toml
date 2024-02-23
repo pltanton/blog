@@ -152,3 +152,9 @@ disableHugoGeneratorInject = false
 
 name = "production"
 URL = "s3://blog?endpoint=https://s3.kaliwe.ru&region=us-east-1&s3ForcePathStyle=true"
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
