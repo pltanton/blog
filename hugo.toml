@@ -53,7 +53,6 @@ disableHugoGeneratorInject = false
   # 
   description = "Anton personal blog"
 
-  homeSubtitle = "/home/anton"
   enableThemeToggle = true
   disableReadOtherPosts = false
 
