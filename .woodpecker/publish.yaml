@@ -3,24 +3,9 @@ steps:
     image: hugomods/hugo
     commands:
       - hugo
+      - hugo deploy
     when:
       - event: push
         branch: master
-    
-  upload:
-    image: woodpeckerci/plugin-s3
-    settings:
-      bucket: blog
-      access_key:
-        from_secret: MINIO_ACCESS_KEY
-      secret_key:
-        from_secret: MINIO_SECRET_KEY
-      source: public/**/*
-      strip_prefix: public/
-      path_style: true
-      target: /
-      endpoint: https://s3.kaliwe.ru
-    when:
-      - event: push
-        branch: master
-
+      - event: manual
+    secrets: [ aws_secret_access_key, aws_access_key_id ] 
