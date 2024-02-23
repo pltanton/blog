@@ -24,7 +24,6 @@ function detectOSColorTheme() {
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
-console.log(chosenTheme)
 
 // Switch the theme.
 function switchTheme(e) {
@@ -58,3 +57,5 @@ if (themeToggle) {
 } else {
   localStorage.setItem("theme", "dark");
 }
+
+console.log(chosenTheme)

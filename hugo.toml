@@ -44,9 +44,6 @@ disableHugoGeneratorInject = false
   series   = "series"
 
 [params]
-  [params.author]
-    name = "Anton Plotnikov"
-
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
@@ -55,63 +52,23 @@ disableHugoGeneratorInject = false
   # Metadata mostly used in document's head
   # 
   description = "Anton personal blog"
-  keywords = ""
-  images = [""]
 
-  # Home subtitle of the index page.
-  #
   homeSubtitle = "/home/anton"
-
-  # Set a background for the homepage
-  # backgroundImage = "assets/images/background.jpg"
-
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  #
-  # gitUrl = ""
-
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  #
+  enableThemeToggle = true
   disableReadOtherPosts = false
 
-  # Enable theme toggle
-  # 
-  # This options enables the theme toggle for the theme. 
-  # Per default, this option is off. 
-  # The theme is respecting the prefers-color-scheme of the operating system. 
-  # With this option on, the page user is able to set the scheme he wants. 
-  enableThemeToggle = true
+  enableSharingButtons = false
+  enableGlobalLanguageMenu = false
 
-  # Sharing buttons
-  #
-  # There are a lot of buttons preconfigured. If you want to change them,
-  # generate the buttons here: https://sharingbuttons.io
-  # and add them into your own `layouts/partials/sharing-buttons.html`
-  #
-  enableSharingButtons = true
-
-  # Global language menu
-  #
-  # Enables the global language menu.
-  #
-  enableGlobalLanguageMenu = true
-
-  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
-  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  #
   customCSS = []
   customJS  = []
 
-  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
-  #
-  justifyContent = false  # Set "text-align: justify" to .post-content.
+  justifyContent = true  # Set "text-align: justify" to .post-content.
 
-  # Integrate Plausible.io
-  # plausibleDataDomain = 'test.com'
-  # plausibleScriptSource = 'https://plausible.io/js/script.js'
+  [params.author]
+    name = "Anton Plotnikov"
 
-  # Custom footer 
-  # If you want, you can easily override the default footer with your own content. 
-  #
+
   [params.footer]
     trademark = false
     rss = false
@@ -175,10 +132,10 @@ disableHugoGeneratorInject = false
     name = "telegram"
     url  = "https://www.t.me/pltanton"
 
-[languages]
-  [languages.en]
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+# [languages]
+#   [languages.en]
+#     weight    = 1
+#     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 [menu]
   [[menu.main]]
