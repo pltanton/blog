@@ -2,9 +2,10 @@ clone:
   git:
     image: woodpeckerci/plugin-git
     settings:
-      use-ssh: true
-      ssh-key: 
-        from_secret: ssh_deploy_key
+      use-ssh: false
+      recursive: true
+      submodule-override:
+        greek: https://gitea.kaliwe.ru/pltanton/greek.git
 
 steps:
   build:
