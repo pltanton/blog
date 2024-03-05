@@ -32,6 +32,9 @@ disableSitemap = false
 disable404 = false
 disableHugoGeneratorInject = false
 
+# refLinksErrorLevel = 'warning'
+# refLinksNotFoundURL = '/'
+
 [permalinks]
 posts = "/posts/:year/:month/:title/"
 
@@ -145,8 +148,19 @@ url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
 identifier = "posts"
 name = "Posts"
 url = "posts/"
+[[menu.main]]
+identifier = "notes"
+name = "Notes"
+url = "notes/"
 
 [deployment]
 [[deployment.targets]]
 name = "production"
 URL = "s3://blog?endpoint=https://s3.kaliwe.ru&region=us-east-1&s3ForcePathStyle=true"
+
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderHooks]
+[markup.goldmark.renderHooks.link]
+enableDefault = true
