@@ -23,7 +23,7 @@ steps:
   git:
     image: bitnami/git
     commands:
-      - ssh-add - <<< "${SSH_PRIVATE_KEY}"
+      - ssh-add - <<< "${SSH_DEPLOY_KEY}"
       - git add --all
       - git status
       - git remote add origin_ssh gitea@gitea.kaliwe.ru:pltanton/blog.git
