@@ -26,5 +26,5 @@ steps:
       remote: gitea@gitea.kaliwe.ru:pltanton/blog.git
       commit: true
       commit_message: "[skip ci] update remotes"
-      ssh_key:
+      ssh-key:
         from_secret: ssh_deploy_key
