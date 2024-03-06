@@ -26,8 +26,8 @@ steps:
     commands:
       - mkdir /root/.ssh
       - echo -n "$SSH_DEPLOY_KEY" > /root/.ssh/id_rsa
-      - wc -l /root/.ssh/id_rsa
       - chmod 600 /root/.ssh/id_rsa
+      - echo "gitea.kaliwe.ru ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL1cmXd5EBCo/Pqxa4001EibH83L3QYxKBHHzHMdeAUW" >> /root/.ssh/known_hosts
 
       - git remote add sshremote gitea@gitea.kaliwe.ru:pltanton/blog.git
       - git config --global user.email ci@ci.kaliwe.ru
