@@ -23,6 +23,7 @@ steps:
     image: appleboy/drone-git-push
     settings:
       branch: master
+      remote: https://gitea.kaliwe.ru/pltanton/blog.git
       remote-name: origin
       commit: true
       commit_message: "[skip ci] update remotes"
