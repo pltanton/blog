@@ -54,7 +54,7 @@ dateformNumTime = "2006-01-02 15:04"
 
 # Metadata mostly used in document's head
 # 
-description = "Anton personal blog"
+description = "Anton's personal blog"
 
 enableThemeToggle = true
 disableReadOtherPosts = false
