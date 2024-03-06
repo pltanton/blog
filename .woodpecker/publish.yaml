@@ -6,6 +6,7 @@ clone:
       submodule-override:
         greek: https://gitea.kaliwe.ru/pltanton/greek.git
       submodule-update-remote: true
+      lfs: false
 
 steps:
   build:
@@ -18,6 +19,14 @@ steps:
         branch: master
       - event: manual
     secrets: [aws_secret_access_key, aws_access_key_id]
+
+  git:
+    image: bitnami/git
+    commands:
+      - git status
+      - git submodule update
+      - git status
+
   
   push-back:
     image: appleboy/drone-git-push
@@ -25,6 +34,6 @@ steps:
       branch: master
       remote: gitea@gitea.kaliwe.ru:pltanton/blog.git
       commit: true
-      commit_message: "[skip ci] update remotes"
+      commit-message: "[skip ci] update remotes"
       ssh-key:
         from_secret: ssh_deploy_key
