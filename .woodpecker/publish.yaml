@@ -23,17 +23,10 @@ steps:
   git:
     image: bitnami/git
     commands:
-      - git status
+      - ssh-add - <<< "${SSH_PRIVATE_KEY}"
       - git add --all
       - git status
-
-  
-  push-back:
-    image: appleboy/drone-git-push
-    settings:
-      branch: master
-      remote: gitea@gitea.kaliwe.ru:pltanton/blog.git
-      commit: true
-      commit-message: "[skip ci] update remotes"
-      ssh-key:
-        from_secret: ssh_deploy_key
+      - git remote add origin_ssh gitea@gitea.kaliwe.ru:pltanton/blog.git
+      - git commit -m "[skip ci] update remotes"
+      - git push orign_ssh master
+    secrets: [ssh_deploy_key]
