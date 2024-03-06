@@ -36,5 +36,6 @@ steps:
       - git status
       - git add --all
       - git status
-      - 'if $(git commit -m "CI: update submobules [skip ci]") ; then ; git push sshremote master ; fi'
+      - 'git commit -m "CI: update submobules [skip ci]" || true'
+      - git push sshremote master
     secrets: [ssh_deploy_key]
