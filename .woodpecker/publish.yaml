@@ -29,6 +29,9 @@ steps:
       - chmod 600 /root/.ssh/id_rsa
 
       - git remote add sshremote gitea@gitea.kaliwe.ru:pltanton/blog.git
+      - git config --global user.email ci@ci.kaliwe.ru
+      - git config --global user.name ci
+
       - git status
       - git add --all
       - git status
