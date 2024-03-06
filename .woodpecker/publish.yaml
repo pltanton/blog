@@ -24,7 +24,7 @@ steps:
     image: bitnami/git
     commands:
       - git status
-      - git submodule update
+      - git add --all
       - git status
 
   
