@@ -23,6 +23,6 @@ steps:
     image: appleboy/drone-git-push
     settings:
       branch: master
-      force: false
+      remote-name: origin
       commit: true
       commit_message: "[skip ci] update remotes"
