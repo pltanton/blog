@@ -21,16 +21,6 @@ steps:
     secrets: [aws_secret_access_key, aws_access_key_id]
 
 
-  push-back:
-    image: appleboy/drone-git-push
-    settings:
-      branch: master
-      remote: gitea@gitea.kaliwe.ru:pltanton/blog.git
-      commit: true
-      commit-message: "[skip ci] update remotes"
-      ssh-key:
-        from_secret: ssh_deploy_key
-
   git:
     image: bitnami/git
     commands:
@@ -42,4 +32,6 @@ steps:
       - git status
       - git add --all
       - git status
+      - 'git commit -m "CI: update submobules [skip ci]"'
+      - git push sshremote master
     secrets: [ssh_deploy_key]
