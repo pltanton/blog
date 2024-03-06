@@ -2,10 +2,10 @@ clone:
   git:
     image: woodpeckerci/plugin-git
     settings:
-      use-ssh: false
       recursive: true
       submodule-override:
         greek: https://gitea.kaliwe.ru/pltanton/greek.git
+      submodule-update-remote: true
 
 steps:
   build:
@@ -18,3 +18,11 @@ steps:
         branch: master
       - event: manual
     secrets: [aws_secret_access_key, aws_access_key_id]
+  
+  push-back:
+    image: appleboy/drone-git-push
+    settings:
+      branch: master
+      force: false
+      commit: true
+      commit_message: "[skip ci] update remotes"
