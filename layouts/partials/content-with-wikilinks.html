@@ -19,11 +19,11 @@
 	{{ $link := . | replaceRE $wikiregexWithText "$1" }}
 	{{ $text := . | replaceRE $wikiregexWithText "$2" }}
 	{{ $wikilink :=  printf "\\[\\[%s\\|%s\\]\\]" $link $text }}	
-    {{ $link := $link | anchorize }}
+    {{ $anchorized := $link | anchorize }}
 
 	{{ with relref $page $link }}
 		{{ $link := printf "%s%s%s%s%s" "<a href=\"" . "\">" $text "</a>" }}
-		{{ $pageContent = $pageContent | replaceRE $wikilink $link }}
+		{{ $pageContent = $pageContent | replaceRE $wikilink $anchorized }}
 	{{ end }}
 {{ end }}
 
