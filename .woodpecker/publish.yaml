@@ -20,13 +20,26 @@ steps:
       - event: manual
     secrets: [aws_secret_access_key, aws_access_key_id]
 
+
+  push-back:
+    image: appleboy/drone-git-push
+    settings:
+      branch: master
+      remote: gitea@gitea.kaliwe.ru:pltanton/blog.git
+      commit: true
+      commit-message: "[skip ci] update remotes"
+      ssh-key:
+        from_secret: ssh_deploy_key
+
   git:
     image: bitnami/git
     commands:
-      - /bin/bash -c 'ssh-add - <<< "${SSH_DEPLOY_KEY}"'
+      - mkdir /root/.ssh
+      - echo -n "$SSH_DEPLOY_KEY" > /root/.ssh/id_rsa
+      - chmod 600 /root/.ssh/id_rsa
+
+      - git remote add sshremote gitea@gitea.kaliwe.ru:pltanton/blog.git
+      - git status
       - git add --all
       - git status
-      - git remote add origin_ssh gitea@gitea.kaliwe.ru:pltanton/blog.git
-      - git commit -m "[skip ci] update remotes"
-      - git push orign_ssh master
     secrets: [ssh_deploy_key]
