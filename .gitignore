@@ -1,2 +1,4 @@
 public/
 resources/
+.direnv/
+.DS_Store

@@ -1,0 +1,21 @@
+<style>
+    .row-centered {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .row-centered {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="row-centered{{ with .Get "class" }} {{ . }}{{ end }}">
+  {{ .Inner }}
+</div>

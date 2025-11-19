@@ -1,12 +1,12 @@
 baseURL = "https://pltanton.dev"
 title = "Plotnikov Anton"
-languageCode = "en-us"
+languageCode = "en"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
-paginate = 10
+pagination.pagerSize = 10
 rssLimit = 10 # Maximum number of items in the RSS feed.
 
 googleAnalytics = "G-SX91263H7X"
@@ -53,16 +53,27 @@ dateformNum = "2006-01-02"
 dateformNumTime = "2006-01-02 15:04"
 
 # Metadata mostly used in document's head
-# 
+#
 description = "Anton's personal blog"
 
 enableThemeToggle = true
 disableReadOtherPosts = false
 
 enableSharingButtons = false
-enableGlobalLanguageMenu = false
 
-customCSS = []
+# Language settings
+enableGlobalLanguageMenu = false
+defaultContentLanguageInSubdir = false
+disableDefaultLanguageRedirect = false
+disableLanguages = []
+[languages]
+  [languages.en]
+    weight = 1
+    contentDir = 'content/en'
+  [languages.ru]
+    weight = 2
+    contentDir = 'content/ru'
+
 customJS = []
 
 justifyContent = true # Set "text-align: justify" to .post-content.
@@ -73,7 +84,7 @@ name = "Anton Plotnikov"
 
 [params.footer]
 trademark = false
-rss = true
+rss = false
 copyright = false
 author = false
 
@@ -97,7 +108,7 @@ logoHomeLink = "/"
 # logoCursorColor    = "#67a2c9"
 # Set to a valid CSS time value to change the animation duration, "0s" to disable.
 # logoCursorAnimate  = "2s"
-# Append the current url pathname to logoText 
+# Append the current url pathname to logoText
 logoCursorPathname = true
 
 [params.portrait]
@@ -106,7 +117,7 @@ alt = "Portrait"
 maxWidth = "170px"
 
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Addon: Social icons
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
@@ -134,11 +145,6 @@ url = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
 name = "telegram"
 url = "https://www.t.me/pltanton"
 
-# [languages]
-#   [languages.en]
-#     weight    = 1
-#     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
 [menu]
 [[menu.main]]
 identifier = "cv"
@@ -148,19 +154,8 @@ url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
 identifier = "posts"
 name = "Posts"
 url = "posts/"
-[[menu.main]]
-identifier = "notes"
-name = "Notes"
-url = "notes/"
 
 [deployment]
 [[deployment.targets]]
 name = "production"
 URL = "s3://blog?endpoint=https://s3.kaliwe.ru&region=us-east-1&s3ForcePathStyle=true"
-
-
-[markup]
-[markup.goldmark]
-[markup.goldmark.renderHooks]
-[markup.goldmark.renderHooks.link]
-enableDefault = true
