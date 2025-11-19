@@ -18,8 +18,11 @@ steps:
       - event: push
         branch: master
       - event: manual
-    secrets: [aws_secret_access_key, aws_access_key_id]
-
+    environment:
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: aws_secret_access_key
+      AWS_ACCESS_KEY_ID:
+        from_secret: aws_access_key_id
 
   git:
     image: bitnami/git
@@ -38,4 +41,6 @@ steps:
       - git status
       - 'git commit -m "CI: update submobules [skip ci]" || true'
       - git push sshremote master
-    secrets: [ssh_deploy_key]
+    environment:
+      SSH_DEPLOY_KEY:
+        from_secret: ssh_deploy_key
