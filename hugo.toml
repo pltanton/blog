@@ -35,9 +35,6 @@ disableHugoGeneratorInject = false
 # refLinksErrorLevel = 'warning'
 # refLinksNotFoundURL = '/'
 
-[permalinks]
-posts = "/posts/:year/:month/:title/"
-
 [blackfriday]
 hrefTargetBlank = true
 
@@ -59,10 +56,10 @@ description = "Anton's personal blog"
 enableThemeToggle = true
 disableReadOtherPosts = false
 
-enableSharingButtons = false
+enableSharingButtons = true
 
 # Language settings
-enableGlobalLanguageMenu = false
+enableGlobalLanguageMenu = true
 defaultContentLanguageInSubdir = false
 disableDefaultLanguageRedirect = false
 disableLanguages = []

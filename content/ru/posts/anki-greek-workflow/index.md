@@ -1,8 +1,9 @@
 ---
 title: "Полуавтоматическое создание карточек для Anki"
+slug: custom-yomitan-anki-setup
 date: 2025-11-19T17:48:11+02:00
 draft: false
-toc: false
+toc: true
 tags:
   - greek
   - anki
