@@ -20,6 +20,8 @@ jobs:
       - name: Setup Nix
         uses: cachix/install-nix-action@v20
         with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Build Hugo Site with Nix Flake
