@@ -18,11 +18,7 @@ jobs:
           lfs: false
 
       - name: Setup Nix
-        uses: cachix/install-nix-action@v20
-        with:
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-          nix_path: nixpkgs=channel:nixos-unstable
+        uses: cachix/install-nix-action@v31
 
       - name: Build Hugo Site with Nix Flake
         run: |
