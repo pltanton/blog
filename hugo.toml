@@ -1,83 +1,78 @@
 baseURL = "https://pltanton.dev"
-title = "Plotnikov Anton"
 languageCode = "en"
 theme = "hello-friend-ng"
-
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
-
 pagination.pagerSize = 10
-rssLimit = 10 # Maximum number of items in the RSS feed.
-
 googleAnalytics = "G-SX91263H7X"
-# disqusShortname = ""
-
-archetypeDir = "archetypes"
-contentDir = "content"
-dataDir = "data"
-layoutDir = "layouts"
-publishDir = "public"
-
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-canonifyURLs = true
-
+# archetypeDir = "archetypes"
+# contentDir = "content"
+# dataDir = "data"
+# layoutDir = "layouts"
+# publishDir = "public"
 enableRobotsTXT = true
 enableGitInfo = false
 enableEmoji = true
 enableMissingTranslationPlaceholders = false
-disableRSS = false
+disableRSS = true
 disableSitemap = false
 disable404 = false
 disableHugoGeneratorInject = false
 
-# refLinksErrorLevel = 'warning'
-# refLinksNotFoundURL = '/'
+[languages]
+[languages.en]
+weight = 1
+contentDir = "content/en"
+title = "Plotnikov Anton"
 
-[blackfriday]
-hrefTargetBlank = true
+[languages.en.params]
+description = "Anton's personal blog"
 
-[taxonomies]
-tag = "tags"
-category = "categories"
-series = "series"
+[languages.en.params.author]
+name = "Anton Plotnikov"
+
+[languages.en.menu]
+[[languages.en.menu.main]]
+identifier = "cv"
+name = "CV"
+url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
+
+[[languages.en.menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "posts/"
+
+[languages.ru]
+weight = 2
+contentDir = "content/ru"
+title = "Плотников Антон"
+
+[languages.ru.params]
+description = "Блог Антона"
+
+[languages.ru.params.author]
+name = "Антон Плотников"
+
+[languages.ru.menu]
+[[languages.ru.menu.main]]
+identifier = "cv"
+name = "CV"
+url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
+
+[[languages.ru.menu.main]]
+identifier = "posts"
+name = "Блог"
+url = "posts/"
 
 [params]
 dateform = "Jan 2, 2006"
 dateformShort = "Jan 2"
 dateformNum = "2006-01-02"
 dateformNumTime = "2006-01-02 15:04"
-
-# Metadata mostly used in document's head
-#
-description = "Anton's personal blog"
-
 enableThemeToggle = true
-disableReadOtherPosts = false
-
 enableSharingButtons = true
-
-# Language settings
+justifyContent = true
 enableGlobalLanguageMenu = true
-defaultContentLanguageInSubdir = false
-disableDefaultLanguageRedirect = false
-disableLanguages = []
-[languages]
-  [languages.en]
-    weight = 1
-    contentDir = 'content/en'
-  [languages.ru]
-    weight = 2
-    contentDir = 'content/ru'
-
-customJS = []
-
-justifyContent = true # Set "text-align: justify" to .post-content.
-
-[params.author]
-name = "Anton Plotnikov"
-
 
 [params.footer]
 trademark = false
@@ -85,39 +80,23 @@ rss = false
 copyright = false
 author = false
 
-topText = []
-bottomText = []
-
-# Colors for favicons
-#
 [params.favicon.color]
 mask = "#1b1c1d"
 msapplication = "#1b1c1d"
 theme = "#1b1c1d"
 
 [params.logo]
-logoMark = ">"
-logoText = "cd /home/anton/"
+logoMark = "# cd "
+logoText = "/home/anton/"
 logoHomeLink = "/"
-# Set true to remove the logo cursor entirely.
-# logoCursorDisabled = false
-# Set to a valid CSS color to change the cursor in the logo.
-# logoCursorColor    = "#67a2c9"
-# Set to a valid CSS time value to change the animation duration, "0s" to disable.
-# logoCursorAnimate  = "2s"
-# Append the current url pathname to logoText
 logoCursorPathname = true
+logoCursorAnimate = "1s"
 
 [params.portrait]
-path = "/img/portrait.jpg"
+path = "/img/portrait20251121.jpeg"
 alt = "Portrait"
 maxWidth = "170px"
 
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Addon: Social icons
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#
 [[params.social]]
 name = "twitter"
 url = "https://twitter.com/pltanton"
@@ -141,16 +120,6 @@ url = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
 [[params.social]]
 name = "telegram"
 url = "https://www.t.me/pltanton"
-
-[menu]
-[[menu.main]]
-identifier = "cv"
-name = "CV"
-url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
-[[menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "posts/"
 
 [deployment]
 [[deployment.targets]]
