@@ -41,11 +41,13 @@ name = "Anton Plotnikov"
 identifier = "cv"
 name = "CV"
 url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
+weight = 1
 
 [[languages.en.menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "posts/"
+identifier = "archive"
+name = "Archive"
+url = "archives/"
+weight = 2
 
 [languages.ru]
 weight = 2
@@ -68,11 +70,13 @@ name = "Антон Плотников"
 identifier = "cv"
 name = "CV"
 url = "https://github.com/pltanton/cv/raw/master/plotnikov_anton_cv.pdf"
+weight = 1
 
 [[languages.ru.menu.main]]
-identifier = "posts"
-name = "Блог"
-url = "posts/"
+identifier = "archive"
+name = "Архив"
+url = "archives/"
+weight = 2
 
 [params]
 defaultTheme = "auto"
