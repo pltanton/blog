@@ -26,15 +26,12 @@ contentDir = "content/en"
 title = "Plotnikov Anton"
 
 [languages.en.params]
-description = "Anton's personal blog"
+description = "Anton Thought"
 
 [languages.en.params.homeInfoParams]
 Title = "Anton Plotnikov"
 Content = "Linux, debugging, and other obsessions"
 Location = "Cyprus, Paphos"
-
-[languages.en.params.author]
-name = "Anton Plotnikov"
 
 [languages.en.menu]
 [[languages.en.menu.main]]
@@ -55,15 +52,12 @@ contentDir = "content/ru"
 title = "Плотников Антон"
 
 [languages.ru.params]
-description = "Блог Антона"
+description = "Anton Thought"
 
 [languages.ru.params.homeInfoParams]
 Title = "Антон Плотников"
 Content = "Linux, debugging, and other obsessions"
 Location = "Кипр, Пафос"
-
-[languages.ru.params.author]
-name = "Антон Плотников"
 
 [languages.ru.menu]
 [[languages.ru.menu.main]]
