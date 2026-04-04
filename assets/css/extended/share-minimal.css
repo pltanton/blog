@@ -1,0 +1,13 @@
+.instant-view-link {
+    margin: 10px 0 0;
+}
+
+.instant-view-link__anchor {
+    color: var(--secondary);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+.instant-view-link__anchor:hover {
+    color: var(--primary);
+}

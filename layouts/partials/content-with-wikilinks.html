@@ -9,8 +9,8 @@
 	{{ $wikilink :=  printf "\\[\\[%s\\]\\]" $link }}
     {{ $anchorized := $link | anchorize }}
 
-	{{ with relref $page $anchorized }}
-		{{ $link := printf "%s%s%s%s%s" "<a href=\"" . "\">" ($.Site.GetPage $anchorized).Title "</a>"  }}
+	{{ with $.Site.GetPage $anchorized }}
+		{{ $link := printf "%s%s%s%s%s" "<a href=\"" .RelPermalink "\">" .Title "</a>" }}
 		{{ $pageContent = $pageContent | replaceRE $wikilink $link }}
 	{{ end }}
 {{ end }}
@@ -18,12 +18,12 @@
 {{ range ($pageContent | findRE $wikiregexWithText) }}
 	{{ $link := . | replaceRE $wikiregexWithText "$1" }}
 	{{ $text := . | replaceRE $wikiregexWithText "$2" }}
-	{{ $wikilink :=  printf "\\[\\[%s\\|%s\\]\\]" $link $text }}	
+	{{ $wikilink :=  printf "\\[\\[%s\\|%s\\]\\]" $link $text }}
     {{ $anchorized := $link | anchorize }}
 
-	{{ with relref $page $link }}
-		{{ $link := printf "%s%s%s%s%s" "<a href=\"" . "\">" $text "</a>" }}
-		{{ $pageContent = $pageContent | replaceRE $wikilink $anchorized }}
+	{{ with $.Site.GetPage $anchorized }}
+		{{ $link := printf "%s%s%s%s%s" "<a href=\"" .RelPermalink "\">" $text "</a>" }}
+		{{ $pageContent = $pageContent | replaceRE $wikilink $link }}
 	{{ end }}
 {{ end }}
 

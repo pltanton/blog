@@ -1,6 +1,6 @@
 baseURL = "https://pltanton.dev"
 languageCode = "en"
-theme = "hello-friend-ng"
+theme = "PaperMod"
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 pagination.pagerSize = 10
@@ -28,6 +28,11 @@ title = "Plotnikov Anton"
 [languages.en.params]
 description = "Anton's personal blog"
 
+[languages.en.params.homeInfoParams]
+Title = "Anton Plotnikov"
+Content = "Linux, debugging, and other obsessions"
+Location = "Cyprus, Paphos"
+
 [languages.en.params.author]
 name = "Anton Plotnikov"
 
@@ -50,6 +55,11 @@ title = "Плотников Антон"
 [languages.ru.params]
 description = "Блог Антона"
 
+[languages.ru.params.homeInfoParams]
+Title = "Антон Плотников"
+Content = "Linux, debugging, and other obsessions"
+Location = "Кипр, Пафос"
+
 [languages.ru.params.author]
 name = "Антон Плотников"
 
@@ -65,14 +75,19 @@ name = "Блог"
 url = "posts/"
 
 [params]
-dateform = "Jan 2, 2006"
-dateformShort = "Jan 2"
-dateformNum = "2006-01-02"
-dateformNumTime = "2006-01-02 15:04"
-enableThemeToggle = true
-enableSharingButtons = true
-justifyContent = true
-enableGlobalLanguageMenu = true
+defaultTheme = "auto"
+disableThemeToggle = false
+disableSpecial1stPost = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowReadingTime = true
+ShowCodeCopyButtons = true
+ShowWordCount = false
+disableLangToggle = false
+displayFullLangName = true
+mainSections = ["posts"]
+keywords = ["blog", "linux", "nixos", "security", "infrastructure"]
 
 [params.footer]
 trademark = false
@@ -80,44 +95,44 @@ rss = false
 copyright = false
 author = false
 
-[params.favicon.color]
-mask = "#1b1c1d"
-msapplication = "#1b1c1d"
-theme = "#1b1c1d"
+[params.assets]
+theme_color = "#12161d"
+msapplication_TileColor = "#12161d"
+safari_pinned_tab = "/safari-pinned-tab.svg"
+favicon = "/favicon.ico"
+favicon16x16 = "/favicon-16x16.png"
+favicon32x32 = "/favicon-32x32.png"
+apple_touch_icon = "/apple-touch-icon.png"
 
-[params.logo]
-logoMark = "# cd "
-logoText = "/home/anton/"
-logoHomeLink = "/"
-logoCursorPathname = true
-logoCursorAnimate = "1s"
+[params.label]
+text = "Anton Thought"
 
 [params.portrait]
 path = "/img/portrait20251121.jpeg"
 alt = "Portrait"
 maxWidth = "170px"
 
-[[params.social]]
-name = "twitter"
+[[params.socialIcons]]
+name = "x"
 url = "https://twitter.com/pltanton"
 
-[[params.social]]
+[[params.socialIcons]]
 name = "instagram"
 url = "https://www.instagram.com/pltanton"
 
-[[params.social]]
+[[params.socialIcons]]
 name = "email"
 url = "mailto:plotnikovanton@gmail.com"
 
-[[params.social]]
+[[params.socialIcons]]
 name = "github"
 url = "https://github.com/pltanton"
 
-[[params.social]]
+[[params.socialIcons]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
 
-[[params.social]]
+[[params.socialIcons]]
 name = "telegram"
 url = "https://www.t.me/pltanton"
 

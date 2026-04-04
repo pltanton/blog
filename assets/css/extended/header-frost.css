@@ -1,0 +1,19 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: color-mix(in srgb, var(--theme) 72%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+.nav {
+    position: relative;
+}
+
+@supports not ((backdrop-filter: blur(1px))) {
+    .header {
+        background: color-mix(in srgb, var(--theme) 92%, transparent);
+    }
+}

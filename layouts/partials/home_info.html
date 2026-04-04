@@ -1,0 +1,34 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info home-hero">
+    <div class="home-hero__media">
+        {{- with site.Params.portrait.path }}
+        <img
+            class="home-hero__avatar"
+            src="{{ . }}"
+            alt="{{ site.Params.portrait.alt | default site.Title }}"
+            {{ with site.Params.portrait.maxWidth }}style="max-width: {{ . }};"{{ end }}
+        >
+        {{- end }}
+    </div>
+
+    <div class="home-hero__body">
+        {{- with .Location }}
+        <p class="home-hero__meta">{{ . }}</p>
+        {{- end }}
+
+        <header class="entry-header">
+            <h1>{{ .Title | markdownify }}</h1>
+        </header>
+
+        {{- with .Content }}
+        <div class="entry-content">
+            {{ . | markdownify }}
+        </div>
+        {{- end }}
+
+        <footer class="entry-footer">
+            {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+        </footer>
+    </div>
+</article>
+{{- end -}}
