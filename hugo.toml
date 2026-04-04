@@ -27,6 +27,7 @@ title = "Plotnikov Anton"
 
 [languages.en.params]
 description = "Anton Thought"
+author = "Anton Plotnikov"
 
 [languages.en.params.homeInfoParams]
 Title = "Anton Plotnikov"
@@ -53,6 +54,7 @@ title = "Плотников Антон"
 
 [languages.ru.params]
 description = "Anton Thought"
+author = "Антон Плотников"
 
 [languages.ru.params.homeInfoParams]
 Title = "Антон Плотников"
