@@ -10,7 +10,7 @@ tags:
   - selfhosted
 ---
 
-{{< image src="images/obsidian-pdf.png" position="center" style="height: 380px;" >}}
+{{< image src="/img/inkflow/obsidian-pdf.png" position="center" style="height: 380px;" >}}
 
 Чуть больше года я веду рабочие заметки на книжке BOOX --- совещания, наброски решений, мысли по ходу дня.
 Писать от руки на e-ink удобно, это не вырывает из потока, но заметки остаются заперты внутри книжки.
@@ -35,8 +35,8 @@ BOOX умеет синхронизировать заметки в облако,
 Чтобы понять, что именно шлёт книжка, сначала поднял заглушку, которая только логировала запросы. Оказалось, всё сводится к двум действиям: осмотреть папку и залить файл. Дальше осталось написать настоящую реализацию --- [inkflow](https://github.com/pltanton/inkflow). Он принимает PDF и раскладывает по vault'у: файл попадает в нужную папку Obsidian, рядом создаётся markdown-заметка по шаблону. Дату и теги проставляю прямо на книжке при создании заметки, inkflow берёт их из имени файла.
 
 {{< row >}}
-{{< image src="images/boox-new.png" position="none" style="height: 420px;" >}}
-{{< image src="images/boox-note.png" position="none" style="height: 420px;" >}}
+{{< image src="/img/inkflow/boox-new.png" position="none" style="height: 420px;" >}}
+{{< image src="/img/inkflow/boox-note.png" position="none" style="height: 420px;" >}}
 {{< /row >}}
 
 Заработало: заметки сами раскладывались по местам, рядом лежал PDF. Не хватало поиска.
@@ -54,8 +54,8 @@ BOOX умеет синхронизировать заметки в облако,
 В Obsidian рядом лежат исходный PDF и распознанная заметка (на один скрин целиком не влезла):
 
 {{< row >}}
-{{< image src="images/obsidian-pdf.png" position="none" style="height: 420px;" >}}
-{{< image src="images/obsidian-ocr.png" position="none" style="height: 420px;" >}}
+{{< image src="/img/inkflow/obsidian-pdf.png" position="none" style="height: 420px;" >}}
+{{< image src="/img/inkflow/obsidian-ocr.png" position="none" style="height: 420px;" >}}
 {{< /row >}}
 
 ### Приватность

@@ -10,7 +10,7 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.hugo ];
+          packages = [ pkgs.hugo pkgs.git-lfs ];
         };
       });
 }
