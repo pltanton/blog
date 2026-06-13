@@ -1,3 +1,25 @@
+<style>
+  .post-content img { cursor: zoom-in; }
+  .post-content img.center { display: block; margin-left: auto; margin-right: auto; }
+  .medium-zoom-image--opened { cursor: zoom-out; }
+  .medium-zoom-overlay { z-index: 9998 !important; }
+  .medium-zoom-image--opened { z-index: 9999 !important; }
+</style>
+<script type="module">
+  import mediumZoom from "https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.esm.min.js";
+
+  const overlay = () =>
+    document.documentElement.getAttribute("data-theme") === "dark"
+      ? "rgba(0, 0, 0, 0.9)"
+      : "rgba(255, 255, 255, 0.95)";
+
+  const zoom = mediumZoom(".post-content img", { background: overlay(), margin: 24 });
+
+  // keep the overlay colour in sync with theme toggles
+  new MutationObserver(() => zoom.update({ background: overlay() }))
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>
+
 {{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
