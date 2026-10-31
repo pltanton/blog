@@ -135,8 +135,3 @@ url = "https://www.linkedin.com/in/anton-plotnikov-576565b8"
 [[params.socialIcons]]
 name = "telegram"
 url = "https://www.t.me/pltanton"
-
-[deployment]
-[[deployment.targets]]
-name = "production"
-URL = "s3://blog?endpoint=https://s3.kaliwe.ru&region=us-east-1&s3ForcePathStyle=true"
